@@ -1,0 +1,6 @@
+1. install erlang from http://www.erlang.org/downloads
+2. install latest rabbitmq
+3. intall RabbitMQ libraries for python 
+  pip install pika --upgrade
+4. start rabbitmq-server
+   C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.10\sbin\rabbitmq-service.bat
