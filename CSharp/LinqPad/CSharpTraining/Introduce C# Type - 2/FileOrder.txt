@@ -1,0 +1,5 @@
+Interface
+Delegate - basic
+Delegate - lambda
+FuncAndAction
+Event
