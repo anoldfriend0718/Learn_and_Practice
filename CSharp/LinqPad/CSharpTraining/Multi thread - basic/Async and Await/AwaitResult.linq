@@ -6,22 +6,38 @@
 async void Main()
 {
 	"Await result".H1();
-	await Print();
-	"End".Dump();
+	$"Thread ID before calling method:{Thread.CurrentThread.ManagedThreadId}".Dump();
+	await Print1();
+	//await Print2();
+	$"Thread ID after calling   method:{Thread.CurrentThread.ManagedThreadId}".Dump();
+	"End".H1("Red");
 }
 
-public async Task Print()
+public async Task Print1()
 {
-	int ret = await Calculate(10);
-	ret.Dump("Result:");
+	$"Thread ID before Print:{Thread.CurrentThread.ManagedThreadId}".Dump();
+	var ret = Calculate(100);
+	$"Thread ID after Print:{Thread.CurrentThread.ManagedThreadId}".Dump();
+	"Result:".H1("Red");
+	ret.Dump();
+}
+
+public async Task Print2()
+{
+	$"Thread ID before Print:{Thread.CurrentThread.ManagedThreadId}".Dump();
+	var ret = await Calculate(100);
+	$"Thread ID after Print:{Thread.CurrentThread.ManagedThreadId}".Dump();
+	"Result:".H1("Red");
+	ret.Dump();
 }
 
 public async Task<int> Calculate(int n)
 {	
 	if(n < 0) return 0;
-	
+	$"Thread ID in Calculate:{Thread.CurrentThread.ManagedThreadId}".Dump();
 	return await Task.Run(() => 
 	{
+		$"Thread ID in Task:{Thread.CurrentThread.ManagedThreadId}".Dump();
 		int sum = 0;
 		for(int i = 0; i < n; i++)
 		{

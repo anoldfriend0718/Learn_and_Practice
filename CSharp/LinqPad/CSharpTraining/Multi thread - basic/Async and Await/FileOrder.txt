@@ -1,3 +1,6 @@
 AsyncAndAwait.linq
 AwaitResult.linq
 AvoidBlockUIThread.linq
+AsyncWorkFlow.linq
+
+SeveralAwaitInSingleAsyncMethod.linq

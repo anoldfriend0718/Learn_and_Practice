@@ -10,9 +10,12 @@ async void Main()
 	
 	 CancellationTokenSource cs = new CancellationTokenSource();
      var token = cs.Token;
+	 $"Thread ID in Main Workflow:{Thread.CurrentThread.ManagedThreadId}".Dump();
+	 
      var ret = Task.Run(() => 
 	 {
-	 	var i = 0;
+	 	$"Thread ID in Task:{Thread.CurrentThread.ManagedThreadId}".Dump();
+		var i = 0;
 		while(true)
 	 	//while(!token.IsCancellationRequested)
 		{	
@@ -21,11 +24,11 @@ async void Main()
 		}
 	 }, token);
 	 	 	
-	Thread.Sleep(10);			
+	Thread.Sleep(100);			
 	cs.Cancel();	
 	
 	try
-	{
+	{		
 		await ret;
 	}
 	catch(OperationCanceledException e)

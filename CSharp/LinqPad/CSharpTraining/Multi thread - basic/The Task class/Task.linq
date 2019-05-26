@@ -6,6 +6,7 @@
 void Main()
 {
 	"Use Task class".H1();
+	$"Thread Id in main control workflow:{Thread.CurrentThread.ManagedThreadId}".Dump();
 	Task.Run(() => $"This will use thread pool thread to do work: {Thread.CurrentThread.ManagedThreadId}".Dump());
 		
 		

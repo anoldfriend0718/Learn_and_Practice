@@ -10,9 +10,11 @@ void Main()
 	
 	 var cs = new CancellationTokenSource();
      var token = cs.Token;
+	 $"Thread ID in calling method:{Thread.CurrentThread.ManagedThreadId}".Dump();
      var ret = Task.Run(() => 
 	 {
-	 	var i = 0;
+	 	$"Thread ID in Task:{Thread.CurrentThread.ManagedThreadId}".Dump();
+		var i = 0;
 	 	while(true)
 		{	
 			token.ThrowIfCancellationRequested();
@@ -37,6 +39,7 @@ void Main()
 	    }
 	}
 	
+	$"Thread ID in calling method:{Thread.CurrentThread.ManagedThreadId}".Dump();
 	ret.IsCompleted.Dump("Is Task Completed");
 	ret.IsCanceled.Dump("Is Task Canceled");
 	ret.IsFaulted.Dump("Is Task Error");

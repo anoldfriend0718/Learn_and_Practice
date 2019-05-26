@@ -10,6 +10,8 @@ void Main()
 	"Raw producer consumer pattern".H1();
 	
 	BlockingCollection<int> bq = new BlockingCollection<int>();
+//	Enumerable.Range(1,10).ToList().ForEach(i=>bq.Add(i));
+//	bq.CompleteAdding();
 	var tasks = Enumerable.Range(1,10).Select(i => Task.Run(() => bq.Add(i)));
 	
 	Task.WhenAll(tasks).ContinueWith(_ => bq.CompleteAdding());

@@ -19,7 +19,7 @@ void Main()
 	
 	"IsNull example".H2("blue");
 	int? arg = null;
-	if ( arg.IsNull() ) {}
+	if ( arg.IsNull() ) {"true".Dump();}
 	
 	"ThrowIfArgumentIsNull example".H2("blue");
 	try
