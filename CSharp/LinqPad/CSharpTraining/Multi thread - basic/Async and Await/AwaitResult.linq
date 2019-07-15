@@ -7,8 +7,8 @@ async void Main()
 {
 	"Await result".H1();
 	$"Thread ID before calling method:{Thread.CurrentThread.ManagedThreadId}".Dump();
-	await Print1();
-	//await Print2();
+	//await Print1();
+	await Print2();
 	$"Thread ID after calling   method:{Thread.CurrentThread.ManagedThreadId}".Dump();
 	"End".H1("Red");
 }
