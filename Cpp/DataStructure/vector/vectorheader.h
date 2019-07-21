@@ -2,6 +2,7 @@
 typedef int Rank;
 #define DEFAULT_CAPACITY 3
 #include <iostream>
+#include <exception>
 template <typename T>
 class Vector
 {
@@ -21,7 +22,7 @@ public:
     Vector(const Vector<T> &v) { CopyFrom(v._elem, 0, v._size); }
     Vector(const Vector<T> &v, Rank lo, Rank hi) { CopyFrom(v._elem, lo, hi); }
     ~Vector() { delete[] _elem; }
-    Rank size() const { return _size; }
+    Rank Size() const { return _size; }
     bool IsEmpty() const { return !_size; }
     void PrintOut() const
     {
@@ -31,11 +32,28 @@ public:
         }
         std::cout << std::endl;
     }
-    Vector<T> &operator=(const Vector<T>& v);
+    Vector<T> &operator=(const Vector<T> &v);
+    T &operator[](Rank r) const { return _elem[r]; };
+    Vector<T> &Permute();
+    Vector<T> &Permute(Rank lo, Rank hi);
+    Rank Find(const T &target, Rank lo, Rank hi) const;
+    Rank Find(const T &target) const;
+    Rank Insert(const T &value, Rank r); //insert value at Rank r
 
 protected:
     T *_elem;
     Rank _size;
     int _capacity;
     void CopyFrom(T const *A, Rank lo, Rank hi);
+    void Expand();
+    void Shrink();
+    void Permute(Vector<T> &v, Rank lo, Rank hi);
+
+private:
+    void Swap(T &a, T &b)
+    {
+        T temp = a;
+        a = b;
+        b = temp;
+    }
 };
