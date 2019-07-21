@@ -5,3 +5,7 @@
 #include "vector_permute.h"
 #include "vector_find.h"
 #include "vector_insert.h"
+#include "vector_remove.h"
+#include "vector_deduplicate.h"
+#include "vector_traverse.h"
+#include "vector_disordered.h"

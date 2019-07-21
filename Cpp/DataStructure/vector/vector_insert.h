@@ -17,3 +17,9 @@ Rank Vector<T>::Insert(const T &value, Rank r)
     _elem[r] = value;
     return r;
 }
+
+template <typename T>
+Rank Vector<T>::PushBack(const T &v)
+{
+    return Insert(v, _size);
+}

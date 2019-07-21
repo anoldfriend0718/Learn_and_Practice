@@ -39,6 +39,12 @@ public:
     Rank Find(const T &target, Rank lo, Rank hi) const;
     Rank Find(const T &target) const;
     Rank Insert(const T &value, Rank r); //insert value at Rank r
+    Rank PushBack(const T &value);       //insert value at the end and return the rank
+    int Remove(Rank lo, Rank hi);        //Remove the element among [lo,hi) and return the removed number
+    T Remove(Rank r);                    //remove the elemnt at rank r and return the removed element value
+    Vector<T> &Deduplicate();            //remove the duplicate elements in this vector
+    void Traverse(void (*Visit)(T &));
+    int Disordered() const;
 
 protected:
     T *_elem;
