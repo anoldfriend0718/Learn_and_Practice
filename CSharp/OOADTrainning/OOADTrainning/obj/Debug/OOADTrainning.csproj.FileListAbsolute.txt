@@ -1,0 +1,7 @@
+c:\users\qxu10\source\repos\OOADTrainning\OOADTrainning\bin\Debug\OOADTrainning.exe.config
+c:\users\qxu10\source\repos\OOADTrainning\OOADTrainning\bin\Debug\OOADTrainning.exe
+c:\users\qxu10\source\repos\OOADTrainning\OOADTrainning\bin\Debug\OOADTrainning.pdb
+c:\users\qxu10\source\repos\OOADTrainning\OOADTrainning\obj\Debug\OOADTrainning.csprojAssemblyReference.cache
+c:\users\qxu10\source\repos\OOADTrainning\OOADTrainning\obj\Debug\OOADTrainning.csproj.CoreCompileInputs.cache
+c:\users\qxu10\source\repos\OOADTrainning\OOADTrainning\obj\Debug\OOADTrainning.exe
+c:\users\qxu10\source\repos\OOADTrainning\OOADTrainning\obj\Debug\OOADTrainning.pdb
