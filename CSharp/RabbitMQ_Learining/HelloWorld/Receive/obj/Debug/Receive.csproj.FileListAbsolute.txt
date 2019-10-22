@@ -1,0 +1,12 @@
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\bin\Debug\Receive.exe.config
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\bin\Debug\Receive.exe
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\bin\Debug\Receive.pdb
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\bin\Debug\RabbitMQ.Client.dll
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.xml
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\bin\Debug\RabbitMQ.Client.xml
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\obj\Debug\Receive.csproj.CoreCompileInputs.cache
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\obj\Debug\Receive.csproj.CopyComplete
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\obj\Debug\Receive.exe
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\obj\Debug\Receive.pdb
+C:\Users\QXu10\source\repos\RabbitMQ_Learining\HelloWorld\Receive\obj\Debug\Receive.csprojAssemblyReference.cache
