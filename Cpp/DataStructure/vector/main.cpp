@@ -63,11 +63,15 @@ int main(int argc, char *argv[])
    v5.Traverse(increase);
    v5.PrintOut();
    std::cout << "v5 disorder is : " << v5.Disordered() << std::endl;
-   std::cout<<"v5 pushback 1: ";
+   std::cout << "v5 pushback 1: ";
    v5.PushBack(1);
    v5.PrintOut();
    std::cout << "new v5 disorder is : " << v5.Disordered() << std::endl;
 
+   int orderedArray[] = {1, 2, 3, 3, 4, 4, 5};
+   Vector<int> v6(orderedArray, 7);
+   auto duplicatedNum = v6.uniquify3();
+   std::cout << "Depulicated num in v6 is " << duplicatedNum << std::endl; //should be 2
 
    return 0;
 };

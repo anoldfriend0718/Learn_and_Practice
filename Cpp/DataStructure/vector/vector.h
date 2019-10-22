@@ -9,3 +9,4 @@
 #include "vector_deduplicate.h"
 #include "vector_traverse.h"
 #include "vector_disordered.h"
+#include "vector_uniquify.h"

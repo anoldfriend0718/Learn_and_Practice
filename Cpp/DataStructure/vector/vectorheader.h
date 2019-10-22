@@ -45,6 +45,9 @@ public:
     Vector<T> &Deduplicate();            //remove the duplicate elements in this vector
     void Traverse(void (*Visit)(T &));
     int Disordered() const;
+    int uniquify1(); //less effective for ordered vector
+    int uniquify2(); //second less effective for ordered vector
+    int uniquify3(); //most effective for ordered vector 
 
 protected:
     T *_elem;

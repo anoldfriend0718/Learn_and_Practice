@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "ostream": "cpp",
+        "new": "cpp",
         "*.tcc": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
@@ -16,13 +16,12 @@
         "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
-        "new": "cpp",
+        "ostream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "string_view": "cpp",
         "system_error": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
+    }
 }
