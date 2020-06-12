@@ -1,0 +1,103 @@
+void Main()
+{
+	// Write code to test your extensions here. Press F5 to compile and run.
+}
+
+public static class MyExtensions
+{
+	// Write custom extension methods here. They will be available to all queries.
+
+	// Show title string
+	public static void Info(this string content)
+	{
+		Util.RawHtml($@"<div style='background-color:#DEE;
+					border:solid 1px #088;
+					margin:20px 0;
+					padding:10px;
+					width:400px;
+					font-weight:bold'>{content}</div>").Dump();
+	}
+
+	public static void H1(this string content, string color = null)
+	{
+		HN(content, 1, color);
+	}
+
+	public static void H2(this string content, string color = null)
+	{
+		HN(content, 2, color);
+	}
+
+	public static void H3(this string content, string color = null)
+	{
+		HN(content, 3, color);
+	}
+
+	public static void H4(this string content, string color = null)
+	{
+		HN(content, 4, color);
+	}
+
+	public static void H5(this string content, string color = null)
+	{
+		HN(content, 5, color);
+	}
+
+	public static void Pre(this string content, string color = null)
+	{
+		var c = color ?? "black";
+		Util.RawHtml($"<pre style='color:{c}'>{content}</pre>").Dump();
+	}
+
+	public static void HN(this string content, int n, string color = null)
+	{
+		var c = color ?? "black";
+		Util.RawHtml($"<h{n} style='color:{c}'>{content}</h{n}>").Dump();
+	}
+
+	// Show Image in result page
+	public static void IMG(this string path, bool useQueryPath = true)
+	{
+		string queryPath = null;
+
+		if (useQueryPath)
+		{
+			queryPath = Path.Combine(Path.GetDirectoryName(Util.CurrentQueryPath), path);
+		}
+		else
+		{
+			queryPath = path;
+		}
+
+		Util.Image(queryPath).Dump();
+	}
+}
+
+// You can also define non-static classes, enums, etc.
+public static class EnuerableEx
+{
+	public static IEnumerable<TResult> Generate<TState, TResult>
+	(
+		TState initialState,
+		Func<TState, bool> condition,
+		Func<TState, TState> iterate,
+		Func<TState, TResult> resultSelector
+	)
+	{
+		var state = initialState;
+		while (condition(state))
+		{
+			yield return resultSelector(state);
+			state = iterate(state);
+		}
+	}
+
+	public static IEnumerable<TState> Generate<TState>
+	(
+		Func<TState, bool> condition,
+		Func<TState, TState> iterate
+	)
+	{
+		return Generate(default(TState), condition, iterate, x => x);
+	}
+}

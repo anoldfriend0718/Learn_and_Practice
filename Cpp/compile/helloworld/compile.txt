@@ -1,0 +1,17 @@
+#precompile
+g++ -E helloworld.cpp -o helloworld.i
+cat helloworld.i | wc -l
+>> 26559
+
+#compile 
+g++ -S helloworld.i -o helloworld.s
+cat helloworld.s | wc -l
+>>117
+
+#obj
+g++ -c helloworld.s -o helloworld.o
+cat helloworld.o | wc -l
+>> 93
+
+#executable 
+g++ -g helloworld.cpp - o helloworld.exe

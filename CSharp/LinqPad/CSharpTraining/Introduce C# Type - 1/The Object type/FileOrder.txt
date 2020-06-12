@@ -1,0 +1,4 @@
+MethodsInObjectType.linq
+Equality.linq
+AddEquatableAndComparableAbilities.linq
+QA.linq

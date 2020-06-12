@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Helloworld": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Temp\\Azure.Functions.Cli.win-x64.2.7.1524\\func.exe",
+      "commandLineArgs": "host start",
+      "workingDirectory": "$(TargetDir)"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+Introduce C#
+Introduce C# Type - 1
+Introduce C# Type - 2
+The generic
+The reflection
+The exception
+Multi thread - basic
+The Linq - Linq to Object

@@ -1,0 +1,3 @@
+ExceptionPattern.linq
+UsingDispose.linq
+DisposePattern.linq

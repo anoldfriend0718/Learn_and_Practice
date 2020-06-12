@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helloworld", "Helloworld\Helloworld.csproj", "{4B8B0B23-DDBA-4451-AE18-3CC7585E97D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanInFanout", "FanInFanout\FanInFanout.csproj", "{76892E6C-D200-4C6F-BAE4-238D6CDC25CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B8B0B23-DDBA-4451-AE18-3CC7585E97D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8B0B23-DDBA-4451-AE18-3CC7585E97D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8B0B23-DDBA-4451-AE18-3CC7585E97D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8B0B23-DDBA-4451-AE18-3CC7585E97D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76892E6C-D200-4C6F-BAE4-238D6CDC25CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76892E6C-D200-4C6F-BAE4-238D6CDC25CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76892E6C-D200-4C6F-BAE4-238D6CDC25CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76892E6C-D200-4C6F-BAE4-238D6CDC25CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6E31589-0F47-4EE8-ADCB-E0F9096E2694}
+	EndGlobalSection
+EndGlobal

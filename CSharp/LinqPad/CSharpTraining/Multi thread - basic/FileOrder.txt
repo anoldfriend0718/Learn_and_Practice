@@ -1,0 +1,5 @@
+The old multi-thread coding style
+The Task class
+Async and Await
+The producer consumer pattern
+Lock and thread safe
