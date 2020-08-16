@@ -1,0 +1,36 @@
+{
+  "bindings": [
+    {
+      "type": "queueTrigger",
+      "direction": "in",
+      "name": "functionTriggerMsg",
+      "queueName": "tndengine-trigger",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "name": "sampleRelatedInputs",
+      "path": "tndengine-input/{TnDEngineSampleRelatedInputs}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "name": "sampleUnrelatedInput",
+      "path": "tndengine-input/{TnDEngineSampleUnrelatedInput}",
+      "connection": "AzureWebJobsStorage"
+    },
+
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "$return",
+      "queueName": "{Destination}",
+      "connection": "AzureWebJobsStorage"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/AzureFunctionWIthMultipleBlobBlinding.dll",
+  "entryPoint": "AzureFunctionWIthMultipleBlobBlinding.Function1.Run"
+}

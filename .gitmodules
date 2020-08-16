@@ -1,0 +1,3 @@
+[submodule "AzureFunction/azure-functions-tests"]
+	path = AzureFunction/azure-functions-tests
+	url = https://github.com/Azure-Samples/azure-functions-tests.git

@@ -5,3 +5,4 @@
 
 typeof(ValueType).IsValueType.Dump();
 typeof(Enum).IsValueType.Dump();
+typeof(string).IsValueType.Dump();

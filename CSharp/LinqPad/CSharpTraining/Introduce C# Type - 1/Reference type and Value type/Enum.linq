@@ -3,6 +3,7 @@
 void Main()
 {
 	"Enum".H1();
+	Color.Black.ToString().Dump();
 	Enum.GetUnderlyingType(typeof(Color)).Name.Dump("underlying type:");
 	((Color[])Enum.GetValues(typeof(Color))).Select(x => x.ToString()).Dump();
 	((Color[])Enum.GetValues(typeof(Color))).Select(x => x.ToString("D")).Dump("Values:");

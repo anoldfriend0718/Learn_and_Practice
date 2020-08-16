@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AzureFunctionsVersion>v2</AzureFunctionsVersion>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.6" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.29" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PInvokeWrapper\PInvokeWrapper.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+	<None Include="..\Core\bin\$(Configuration)\Core.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+	<None Include="..\PInvoke\bin\$(Configuration)\PInvoke.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+	
+  
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cd  $(ProjectDir)&#xD;&#xA;cd ..&#xD;&#xA;xcopy.exe &quot;Core\bin\$(Configuration)\Core.dll&quot; &quot;$(TargetDir)\bin&quot; /d /y /s&#xD;&#xA;xcopy.exe &quot;PInvoke\bin\$(Configuration)\PInvoke.dll&quot; &quot;$(TargetDir)\bin&quot; /d /y /s" />
+  </Target>
+</Project>
